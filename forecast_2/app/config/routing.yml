@@ -1,0 +1,60 @@
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+#### FORECAST ####
+
+forecast_1:
+    path: "/forecast/index"
+    defaults: {_controller: AppBundle:Forecast:Index}
+
+forecast_2:
+    path: "/forecast/{weather}"
+    defaults: {_controller: AppBundle:Forecast:IndexParam , weather: Sunny}
+
+forecast_3:
+    path: "/forecast/{weather}/{temperature}"
+    defaults: {_controller: AppBundle:Forecast:Index2Params, weather: not_indicated, temperature: not_indicated}
+
+forecast_4:
+    path: "/forecast/indexRequest/{weather}/{temperature}"
+    defaults: {_controller: AppBundle:Forecast:IndexRequest, weather: not_indicated, temperature: not_indicated}
+
+
+#### REDIRECT ####
+redirec_internal:
+    path: "/redirect/internal"
+    defaults: {_controller: AppBundle:Redirect:internalRedirect}
+
+redirect_index:
+    path: "/redirect/index"
+    defaults: {_controller: AppBundle:Redirect:index}
+
+redirect_permanent:
+    path: "/redirect/permanent"
+    defaults: {_controller: AppBundle:Redirect:redirectPermanent}
+
+redirect_external:
+    path: "/redirect/external"
+    defaults: {_controller: AppBundle:Redirect:externalRedirect}
+
+
+#### EJERCICIO CALCULOS CON NUMEROS ####
+
+suma:
+    path: "/calculo/suma/{number_1}/{number_2}"
+    defaults: {_controller: AppBundle:Calcular:index}
+
+resta:
+    path: "/calculo/resta/{number_1}/{number_2}"
+    defaults: {_controller: AppBundle:Calcular:resta}
+
+multiplicacion:
+    path: "/calculo/multiplicacion/{number_1}/{number_2}"
+    defaults: {_controller: AppBundle:Calcular:multiplicacion}
+
+division:
+    path: "/calculo/division/{number_1}/{number_2}"
+    defaults: {_controller: AppBundle:Calcular:division}
+
+
