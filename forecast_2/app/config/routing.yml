@@ -81,3 +81,8 @@ location_index:
     path: "/location/index"
     defaults : {_controller: AppBundle:Location:index}
 
+#### REQUEST Y RESPONSE ####
+
+enconde_json:
+    path: "/location/json"
+    defaults: {_controller: AppBundle:Location:indexJson}

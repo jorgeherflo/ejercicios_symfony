@@ -16,4 +16,13 @@ class LocationController extends Controller
         return $this->render('location/index.html.twig');
     }
 
+    public function indexJsonAction() {
+        $response = new Response(json_encode(array('location' => 'You are located in Valladolid, Spain')));
+
+        // Para que no descargue el json ponemos text/json, true en vez de aplication/json solo.
+        $response->headers->set('Content-type', 'text/json', true);
+
+        return $response;
+    }
+
 }
