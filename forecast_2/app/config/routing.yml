@@ -57,4 +57,8 @@ division:
     path: "/calculo/division/{number_1}/{number_2}"
     defaults: {_controller: AppBundle:Calcular:division}
 
+#### MANEJO DE ERRORES ####
 
+get_temp:
+    path: "/temperature/{id}"
+    defaults: {_controller: AppBundle:Temperature:get}
