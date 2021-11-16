@@ -62,3 +62,22 @@ division:
 get_temp:
     path: "/temperature/{id}"
     defaults: {_controller: AppBundle:Temperature:get}
+    requirements:
+         id: \d+
+
+#### MANEJO DE SESIONES ####
+
+check_temp:
+    path: "/temperature/check"
+    defaults: {_controller: AppBundle:Temperature:check}
+
+check_log:
+    path: "/temperature/getall"
+    defaults: {_controller: AppBundle:Temperature:getAll}
+
+#### MENSAJES ENTRE PANTALLAS ####
+
+location_index:
+    path: "/location/index"
+    defaults : {_controller: AppBundle:Location:index}
+
