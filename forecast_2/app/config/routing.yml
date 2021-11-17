@@ -86,3 +86,23 @@ location_index:
 enconde_json:
     path: "/location/json"
     defaults: {_controller: AppBundle:Location:indexJson}
+
+
+#### VISTAS SIN CONTROLADOR ####
+
+standalone:
+    path: "/standalone"
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template: standalone/index.html.twig
+        maxAge: 86400
+        sharedAge: 86400
+
+
+#### Redirecion a otras acciones ####
+
+fordward_index:
+    path: "/forward"
+    defaults: {_controller: AppBundle:Forward:index}
+
+
